@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>about — joy chou</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .about-intro {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+
+    .highlight {
+      cursor: pointer;
+      border-bottom: 1px dotted #000;
+
+    }
+
+    .highlight:hover {
+      background: rgba(0,0,0,0.05);
+    }
+
+    .reveal {
+      display: none;
+      margin-top: 0.75rem;
+      font-size: 0.90rem;
+      opacity: 0.85;
+      font-style:italic;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .pill-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 3rem;
+    }
+
+    .pill {
+      padding: 0.3rem 0.6rem;
+      border: 1px solid #000;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      cursor: default;
+    }
+
+    .hover-note {
+      font-size: 0.85rem;
+      opacity: 0.6;
+      margin-top: 0.5rem;
+    }
+
+
+  </style>
+</head>
+
+<body>
+
+  <div class="page-container">
+    <a href="index.html" class="back-link">← home</a>
+
+    <h1>about</h1>
+    
+
+
+    <!-- intro -->
+    <div class="about-intro">
+      <p>
+        i am a <span class="highlight" data-target="identity">queer, taiwanese-american creative</span>
+        working at the intersection of research, art, and community.
+      </p>
+
+    </div>
+
+    <!-- research -->
+     
+    <div class="section">
+      <p>
+        my research bridges <span class="highlight" data-target="cog">cognitive psychology</span>,
+        <span class="highlight" data-target="comp">computational modeling</span>, and
+        <span class="highlight" data-target="music">music</span> to investigate how large-scale musical
+        datasets can reveal cross-cultural patterns of meaning and emotion.
+      </p>
+
+      <div id="cog" class="reveal">
+        perception • memory • emotion • nostalgia
+      </div>
+      <div id="comp" class="reveal">
+        python • r • statistical modeling • machine learning
+      </div>
+      <div id="music" class="reveal">
+        timbre • tonality • popular music • cross-cultural corpus studies
+      </div>
+
+    </div>
+
+    <!-- work -->
+    <div class="section">
+      <p>
+        i currently work as a program coordinator at
+        northwestern’s department of communication sciences & disorders,
+        managing research projects focused on early childhood intervention.
+
+        with nearly six years of experience across education and nonprofit spaces,
+        i am deeply committed to expanding access to civic engagement and
+        empowering young people as future leaders!
+      </p>
+
+      <div class="pill-container">
+        <div class="pill">project management</div>
+        <div class="pill">youth leadership</div>
+        <div class="pill">civic engagement</div>
+        <div class="pill">communication</div>
+        <div class="pill">data analysis</div>
+
+      </div>
+    <div class="section">
+
+    </div>
+    <div class="section">
+        <h3>education</h3>
+        <p>
+        northwestern university: <span class="highlight" data-target="school">music cognition (BM) & psychology (BA)</span>
+
+        </p> 
+        <div id="school" class="reveal">
+        minor in legal studies, integrated marketing communications certificate
+        </div>
+        
+    </div>
+
+    <div class="ticker-container">
+
+    <!-- ticker-label -->
+  <span class="ticker-label">currently thinking about ...</span>
+  <div class="ticker">
+    <div class="ticker-track">
+      <span>computational analysis of nostalgia in mandarin pop music</span>
+      <span>•</span>
+      <span>development of musical preferences</span>
+      <span>•</span>
+      <span>cognitive representation of musical creation</span>
+      <span>•</span>
+      <span>musical narratives</span>
+      <span>•</span>
+      <span>state of the world...</span>
+      
+    </div>
+        <div class="section">
+
+        </div>
+        
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.highlight').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        const target = document.getElementById(el.dataset.target);
+        if (target) target.style.display = 'block';
+      });
+
+      el.addEventListener('mouseleave', () => {
+        const target = document.getElementById(el.dataset.target);
+        if (target) target.style.display = 'none';
+      });
+
+      el.addEventListener('click', () => {
+        const target = document.getElementById(el.dataset.target);
+        if (target) {
+          target.style.display =
+            target.style.display === 'block' ? 'none' : 'block';
+        }
+      });
+    });
+
+  </script>
+
+
+
+</body>
+</html>

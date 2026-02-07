@@ -1,0 +1,236 @@
+body {
+  margin: 0;
+  font-family: "IBM Plex Mono", monospace;
+  background: #fff;
+  color: #111;
+  min-height: 100vh;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+/* Hero text */
+.hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  text-align: center;
+  z-index: 2;
+  opacity: 0;
+  transition: transform 1s cubic-bezier(0.22,1,0.36,1), opacity 1s ease;
+}
+
+.hero.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.hero h1 {
+  font-size: clamp(5rem, 10vw, 8rem);
+  margin: 0;
+}
+
+.hero p {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  color: #444;
+}
+
+/* Particle canvas behind everything */
+#particles {
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:0;
+}
+
+/* Floating buttons */
+#floating-buttons {
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index: 2;
+}
+
+.button {
+  position: absolute;
+  padding: 1rem 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #111;
+  border: none;           /* start with no border */
+  border-radius: 0;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transform: scale(1);
+  transition: transform 0.3s ease, border-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease, border-width 0.3s ease;
+}
+
+/* Remove default link styling for buttons */
+.button {
+  text-decoration: none;
+}
+
+.button:visited {
+  color: #111;
+}
+
+.button:hover {
+  text-decoration: none;
+}
+
+
+.button:hover {
+  transform: scale(1.5);
+  color: white;
+  border: 3px solid black;
+  background-color: black;
+  border-radius: 0;            
+  
+}
+
+/*for index page */
+.button::after {
+  content: attr(data-code);
+  position: absolute;
+  top: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.70rem;
+  color: #1c1a1a;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  font-family: "IBM Plex Mono", monospace;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.button:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(4px);
+}
+
+/* Typing effect at bottom */
+.typing-container {
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
+  text-align: center;
+  z-index: 4;
+}
+
+.typing {
+  font-size: 1.2rem;
+  color: #111;
+  font-family: "IBM Plex Mono", monospace;
+  min-height: 1.5em;
+}
+
+#social-icons {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  z-index: 3;
+}
+
+#social-icons a {
+  font-size: 1.5rem;
+  color: #111;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#social-icons a:hover {
+  transform: scale(1.2);
+  color: #364eff; /* highlight color */
+}
+
+/* for inner pages */
+.page-container {
+  max-width: 800px;
+  margin: 5rem auto;
+  padding: 0 2rem;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.page-container h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.page-container p,
+.page-container li {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+  text-decoration: none;
+  color: #111;
+}
+
+.back-link:hover {
+  transform: scale(1.2);
+  text-decoration: wavy;
+}
+
+
+.ticker-container {
+  margin: 3rem 0;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+.ticker-label {
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.ticker {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-track {
+  display: inline-block;
+  padding-left: 100%;
+  animation: ticker-scroll 30s linear infinite;
+}
+
+.ticker-track span {
+  margin-right: 1.5rem;
+}
+
+.ticker:hover .ticker-track {
+  animation-play-state: paused;
+}
+
+@keyframes ticker-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+section {
+  margin-top: 4rem;
+}
+
+
+

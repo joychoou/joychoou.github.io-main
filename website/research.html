@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>research — joy chou</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "IBM Plex Mono", monospace;
+      background: #fff;
+      color: #111;
+      overflow-x: hidden;
+      overflow-y: auto;
+      line-height: 1.7;
+    }
+
+    .page-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    .back-link {
+      text-decoration: none;
+      color: #111;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      display: inline-block;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: lowercase;
+      margin-bottom: 1rem;
+    }
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      border: 1px solid #000;
+      padding: 2rem;
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .project-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-summary {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      opacity: 0.8;
+    }
+
+    .project-detail {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      opacity: 0.7;
+      display: none; /* initially hidden */
+      margin-top: 0.8rem;
+    }
+
+    /* Scroll reveal */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* optional tags */
+    .tag-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 1rem;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      padding: 0.2rem 0.5rem;
+      border: 1px solid #000;
+      border-radius: 999px;
+    }
+    /* General Research Experience */
+    .experience-section {
+      margin-top: 4rem;
+    }
+
+    .experience-entry {
+      margin-bottom: 2rem;
+      border-left: 3px solid #111;
+      padding-left: 1rem;
+    }
+
+    .experience-entry h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .experience-entry p {
+      font-size: 0.9rem;
+      opacity: 0.85;
+      margin-bottom: 0.3rem;
+    }
+
+    .experience-entry ul {
+      margin: 0.5rem 0 0 1.2rem;
+      padding: 0;
+    }
+
+    .experience-entry ul li {
+      margin-bottom: 0.4rem;
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <div class="page-container">
+    <a href="index.html" class="back-link">← home</a>
+    <h1>research</h1>
+
+    <div class="research-grid reveal-on-scroll">
+
+      <!-- Project 1 -->
+      <div class="project-card">
+        <div class="project-title">decoding k-pop: a computational analysis of musical elements</div>
+        <div class="project-summary">
+What makes K-Pop “K-Pop”? Are there fundamental stylistic differences between Korean Pop music and Western Pop music? If so, what musical elements, including key modulation, tonality, formal structures, and timbre, define K-Pop? 
+        </div>
+        <div class="project-detail">
+        I programmed original key-finding algorithms using Python, R, and humdrumR to visualize key modulations and key profiles across large datasets. Also developed a classifier to predict K-Pop’s musical characteristics using a neural network while comparing various machine learning models and employing statistical tests such as regression, Akaike Information Criterion, and odds ratio analysis to identify key musical features that distinguish K-Pop from Western music. 
+        </div>
+        
+        <div class="tag-container">
+          <div class="tag">cross-cultural</div>
+          <div class="tag">computational modeling</div>
+          <div class="tag">corpus studies</div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div class="project-title">beyond legal reformation: trans community mutual aid through tiktok</div>
+        <div class="project-summary">
+This project examines how young trans men TikTok content creators engage in community mutual aid through their TikTok content amid the influx of anti-trans legislation, as a window into how these anti-trans bills are directly and eminently impacting young people.        </div>
+        <div class="project-detail">I developed a comprehensive coding system categorizing over 1000 TikTok videos of 20 transgender youth creators to assess how their content evolved and engaged in community mutual aid. In response to prevailing anti-trans narratives found within these laws, trans men responded to them in various ways including humor, “thirst traps,” or simply sharing their experiences with navigating their transness. 
+ </div>
+        <div class="tag-container">
+          <div class="tag">mutual aid</div>
+          <div class="tag">legal studies</div>
+          <div class="tag">quantitative & qualitative analysis</div>
+        </div>
+      </div>
+
+
+    <!-- General Research Experience -->
+      <div class="experience-entry">
+        <h3>Bienen School of Music</h3>
+        <p>Researcher (SURG Grant Recipient, Senior Honors Thesis)</p>
+        <ul>
+          <li>Programmed original key-finding algorithms to visualize key modulations and key profiles across K-Pop and Western music datasets using Python, R, humdrumR, comp_mus, Sonic Visualizer, and Spotify APIs.</li>
+          <li>Developed a classifier to predict K-Pop’s musical characteristics using a neural network, comparing models (SVM, random forest) and applying AIC, regression tree, and odds ratio analysis.</li>
+          <li>Oral presenter at Northwestern’s Undergraduate Research Exposition (1 of 5 selected among 100+ applicants).</li>
+        </ul>
+      </div>
+
+      <div class="experience-entry">
+        <h3>Social Cognition & Intergroup Processes (SCIP Lab)</h3>
+        <p>Research Assistant</p>
+        <ul>
+          <li>Extracted multivariate qualitative data on perpetrators and victims of police brutality by coding 100+ YouTube videos to analyze implicit racial biases.</li>
+          <li>Created codebooks for implicit racial bias surveys to systematize future bias assessments.</li>
+        </ul>
+      </div>
+
+      <div class="experience-entry">
+        <h3>Northwestern Weinberg College</h3>
+        <p>Researcher (WCAS Grant Recipient)</p>
+        <ul>
+          <li>Generated a coding system categorizing 1000+ TikTok videos of 20 transgender youth creators to analyze community mutual aid in response to anti-trans legislation.</li>
+          <li>Analyzed social media metrics to examine evolution of category rates and gender expression differences demonstrating radical resistance.</li>
+        </ul>
+      </div>
+
+      <div class="experience-entry">
+        <h3>Northwestern Music Cognition Lab</h3>
+        <p>Research Assistant (URAP Grant Recipient)</p>
+        <ul>
+          <li>Applied Python (Music21 Toolkit) to model and quantify differences between musicians’ and listeners’ musical experiences based on structural understanding.</li>
+          <li>Analyzed 10 classical music scores for form, harmonic progression, melodic structure, and interaction with musical expectations.</li>
+        </ul>
+      </div>
+
+
+  </div>
+
+    </div>
+  </div>
+  
+
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Project card toggle details
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const detail = card.querySelector('.project-detail');
+        if(detail.style.display === 'block') {
+          detail.style.display = 'none';
+        } else {
+          detail.style.display = 'block';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

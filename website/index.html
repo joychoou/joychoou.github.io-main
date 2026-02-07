@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joy Chou</title>
+
+  <!-- IBM Plex Mono -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (icons) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Particle / neural background -->
+  <canvas id="particles"></canvas>
+
+  <!-- Hero text -->
+  <div class="hero">
+    <h1>joy chou</h1>
+    <p>joy is a computational musicologist, psychologist, activist, and creative based in chicago.</p>
+  </div>
+
+  <!-- Floating buttons -->
+<a class="button" href="about.html" data-code="click to learn more about me!">about</a>
+<a class="button" href="music.html" data-code="all things music">music</a>
+<a class="button" href="research.html" data-code="music cognition,psychology, neuroscience" >research</a>
+<a class="button" href="cv.html" data-code="export(cv.pdf)">CV</a>
+
+
+
+  <!-- Typing visualization (bottom) -->
+  <div class="typing-container">
+    <p class="typing" id="typing"></p>
+  </div>
+
+  <!-- Social icons (Font Awesome) -->
+  <div id="social-icons">
+    <a href="mailto:joychou@u.northwestern.edu" aria-label="Email">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/joy-chou-1367201a2/" target="_blank" aria-label="LinkedIn">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/joychoou" target="_blank" aria-label="GitHub">
+      <i class="fa-brands fa-github"></i>
+    </a>
+  </div>
+
+  <!-- Your JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>

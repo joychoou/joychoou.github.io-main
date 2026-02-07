@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>music — joy chou</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "IBM Plex Mono", monospace;
+      background: #fff;
+      color: #111;
+      overflow-x: hidden;
+      overflow-y: auto;
+      line-height: 1.7;
+    }
+
+    .page-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    .back-link {
+      text-decoration: none;
+      color: #111;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      display: inline-block;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.05em;
+      text-transform: lowercase;
+    }
+
+    /* Music collection */
+    .music-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .music-card {
+      border: 1px solid #000;
+      border-radius: 8px;
+      padding: 1.5rem;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .music-card:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .music-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .music-summary {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      margin-bottom: 0.8rem;
+    }
+
+    .play-button {
+      display: inline-block;
+      padding: 0.4rem 0.7rem;
+      border: 1px solid #111;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .play-button:hover {
+      background: #111;
+      color: #fff;
+    }
+
+    /* Music analysis */
+    .analysis-section {
+      margin-top: 3rem;
+    }
+
+    .analysis-card {
+      border: 1px solid #000;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      overflow: hidden;
+    }
+
+    .analysis-title {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .waveform {
+      width: 100%;
+      height: 80px;
+      background: #eee;
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+      margin-top: 0.8rem;
+    }
+
+    .waveform-bar {
+      position: absolute;
+      bottom: 0;
+      width: 2px;
+      background: #111;
+      height: 50%;
+      animation: wave 1s infinite linear;
+    }
+
+    @keyframes wave {
+      0%, 100% {height: 50%;}
+      50% {height: 100%;}
+    }
+
+    /* Scroll reveal */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+    <a href="index.html" class="back-link">← home</a>
+    <h1>music</h1>
+
+    <!-- Section 1: Music Collection -->
+    <h2>collection</h2>
+    <div class="music-grid reveal-on-scroll">
+
+      <div class="music-card">
+        <div class="music-title">K-Pop Timbre Exploration</div>
+        <div class="music-summary">Analyzing emotional features in K-Pop songs using Python & Sonic Visualizer.</div>
+        <div class="play-button" onclick="alert('Audio preview coming soon!')">▶ play</div>
+      </div>
+
+      <div class="music-card">
+        <div class="music-title">Western Pop Dataset</div>
+        <div class="music-summary">Statistical exploration of harmonic and melodic patterns in Western pop.</div>
+        <div class="play-button" onclick="alert('Audio preview coming soon!')">▶ play</div>
+      </div>
+
+    </div>
+
+    <!-- Section 2: Music Analysis -->
+    <h2>analysis</h2>
+    <div class="analysis-section reveal-on-scroll">
+
+      <div class="analysis-card">
+        <div class="analysis-title">Timbre Waveform</div>
+        <div class="waveform">
+          <!-- generate 50 bars for example -->
+          <script>
+            for(let i=0;i<50;i++){
+              const bar = document.createElement('div');
+              bar.classList.add('waveform-bar');
+              bar.style.left = `${i*2.2}px`;
+              bar.style.animationDelay = `${Math.random()}s`;
+              document.currentScript.parentNode.appendChild(bar);
+            }
+          </script>
+        </div>
+      </div>
+
+      <div class="analysis-card">
+        <div class="analysis-title">Harmonic Patterns</div>
+        <div class="waveform">
+          <script>
+            for(let i=0;i<50;i++){
+              const bar = document.createElement('div');
+              bar.classList.add('waveform-bar');
+              bar.style.left = `${i*2.2}px`;
+              bar.style.animationDelay = `${Math.random()}s`;
+              bar.style.height = `${30+Math.random()*70}%`;
+              document.currentScript.parentNode.appendChild(bar);
+            }
+          </script>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>

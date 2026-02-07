@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "label": "about",
+      "target": "about",
+      "x": 18,
+      "y": 35,
+      "reveal": 0.25
+    },
+    {
+      "label": "music",
+      "target": "music",
+      "x": 62,
+      "y": 58,
+      "reveal": 0.4
+    },
+    {
+      "label": "research",
+      "target": "research",
+      "x": 28,
+      "y": 92,
+      "reveal": 0.6
+    },
+    {
+      "label": "cv",
+      "target": "cv",
+      "x": 74,
+      "y": 120,
+      "reveal": 0.8
+    }
+  ]
+}
