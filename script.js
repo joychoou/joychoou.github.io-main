@@ -12,10 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 2️⃣ Floating button positions
   const positions = [
-    {x: width*0.1, y: height*0.1},       // about
-    {x: width*0.85, y: height*0.1},      // music
-    {x: width*0.1, y: height*0.8},       // research
-    {x: width*0.85, y: height*0.8}       // cv
+    {x: width*0.63, y: height*0.1},       // about
+    {x: width*0.70, y: height*0.1},      // music
+    {x: width*0.76, y: height*0.1},       // research
+    {x: width*0.85, y: height*0.1}       // cv
   ];
 
   buttons.forEach((btn, i) => {
@@ -122,3 +122,5 @@ document.addEventListener("DOMContentLoaded", () => {
     height = canvas.height = window.innerHeight;
   });
 });
+
+
